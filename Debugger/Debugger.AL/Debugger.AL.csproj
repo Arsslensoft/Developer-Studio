@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{895CF972-0807-4872-856A-01561C0CE9E0}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Debugger.AL</RootNamespace>
+    <AssemblyName>Debugger.AL</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=11.8.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PopupControl">
+      <HintPath>..\..\Bin\PopupControl.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CallStack.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CallStack.Designer.cs">
+      <DependentUpon>CallStack.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BreakControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="BreakControl.Designer.cs">
+      <DependentUpon>BreakControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExceptionCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ExceptionCtrl.Designer.cs">
+      <DependentUpon>ExceptionCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThreadCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ThreadCtrl.Designer.cs">
+      <DependentUpon>ThreadCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ToolTipPopup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ToolTipPopup.designer.cs">
+      <DependentUpon>ToolTipPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Debugger.cs" />
+    <Compile Include="ComplexPopup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ComplexPopup.designer.cs">
+      <DependentUpon>ComplexPopup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DebugNode.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="DebugValueExplorer.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TreeNode.cs" />
+    <Compile Include="ValueNode.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="CallStack.resx">
+      <DependentUpon>CallStack.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ComplexPopup.resx">
+      <DependentUpon>ComplexPopup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BreakControl.resx">
+      <DependentUpon>BreakControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExceptionCtrl.resx">
+      <DependentUpon>ExceptionCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ThreadCtrl.resx">
+      <DependentUpon>ThreadCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ToolTipPopup.resx">
+      <DependentUpon>ToolTipPopup.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Debugger.Core\Debugger.Core.csproj">
+      <Project>{1d18d788-f7ee-4585-a23b-34dc8ec63cb8}</Project>
+      <Name>Debugger.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NREFACTORY\ICSharpCode.NRefactory.Cecil\ICSharpCode.NRefactory.Cecil.csproj">
+      <Project>{2b8f4f83-c2b3-4e84-a27b-8dee1be0e006}</Project>
+      <Name>ICSharpCode.NRefactory.Cecil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NREFACTORY\ICSharpCode.NRefactory.AL\ICSharpCode.NRefactory.AL.csproj">
+      <Project>{53dca265-3c3c-42f9-b647-f72ba678122b}</Project>
+      <Name>ICSharpCode.NRefactory.AL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\NREFACTORY\ICSharpCode.NRefactory\ICSharpCode.NRefactory.csproj">
+      <Project>{3b2a5653-ec97-4001-bb9b-d90f1af2c371}</Project>
+      <Name>ICSharpCode.NRefactory</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

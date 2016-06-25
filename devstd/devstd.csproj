@@ -1,0 +1,624 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5E0EABDA-F662-4876-989A-70BFC513B3EC}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>devstd</RootNamespace>
+    <AssemblyName>devstd</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>devstdpro.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CVP, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Research\CVPNEW\CVP\bin\Debug\CVP.dll</HintPath>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar.SuperGrid, Version=11.8.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevComponents.DotNetBar2, Version=11.8.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevComponents.TreeGX, Version=11.8.0.0, Culture=neutral, PublicKeyToken=cfcbd7476b2389d1, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PopupControl">
+      <HintPath>..\..\DS15\Bin\PopupControl.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ELog.cs" />
+    <Compile Include="FindAndReplaceFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FindAndReplaceFrm.designer.cs">
+      <DependentUpon>FindAndReplaceFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NewSourceCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\NewSourceCtrl.designer.cs">
+      <DependentUpon>NewSourceCtrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CVPPlay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\CVPPlay.Designer.cs">
+      <DependentUpon>CVPPlay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddTTSFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddTTSFrm.Designer.cs">
+      <DependentUpon>AddTTSFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Aboutfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Aboutfrm.designer.cs">
+      <DependentUpon>Aboutfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AddFrm.designer.cs">
+      <DependentUpon>AddFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Checkerfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Checkerfrm.designer.cs">
+      <DependentUpon>Checkerfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProjectN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProjectN.designer.cs">
+      <DependentUpon>ProjectN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ProjNameFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ProjNameFrm.designer.cs">
+      <DependentUpon>ProjNameFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ReferenceAdder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReferenceAdder.designer.cs">
+      <DependentUpon>ReferenceAdder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Report.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\Report.designer.cs">
+      <DependentUpon>Report.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SettingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SettingsForm.designer.cs">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SourceN.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SourceN.designer.cs">
+      <DependentUpon>SourceN.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\VirusTotal.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ScriptProvider.cs" />
+    <Compile Include="StartPageCtrl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StartPageCtrl.Designer.cs">
+      <DependentUpon>StartPageCtrl.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FindAndReplaceFrm.resx">
+      <DependentUpon>FindAndReplaceFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.de-DE.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.en-US.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.fr-FR.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Aboutfrm.resx">
+      <DependentUpon>Aboutfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddFrm.resx">
+      <DependentUpon>AddFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Checkerfrm.resx">
+      <DependentUpon>Checkerfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NewSourceCtrl.resx">
+      <DependentUpon>NewSourceCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\CVPPlay.resx">
+      <DependentUpon>CVPPlay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\AddTTSFrm.resx">
+      <DependentUpon>AddTTSFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProjectN.resx">
+      <DependentUpon>ProjectN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ProjNameFrm.resx">
+      <DependentUpon>ProjNameFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReferenceAdder.resx">
+      <DependentUpon>ReferenceAdder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Report.resx">
+      <DependentUpon>Report.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SettingsForm.resx">
+      <DependentUpon>SettingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SourceN.resx">
+      <DependentUpon>SourceN.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="StartPageCtrl.resx">
+      <DependentUpon>StartPageCtrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\event.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\float.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\AL.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alproj.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\event2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\application_split.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bookmark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bug.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\callstack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chat-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\checked_user-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\comments.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\compile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\control_panel-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cut.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\data.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_message-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\devstdpro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\downloading_updates-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dsol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_property-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_select_all.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit_user-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\empty_trash-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\erase.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\errors.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find_user-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\formd.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Forward.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ForwardDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\group-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\guest-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\highlight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\info-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\integer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\localvariables.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail_find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mail_inbox.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\maximize.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\message-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\mysql-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\new.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewProject.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\NewProjectDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\openfilesol.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\paste.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pause-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\play-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plugin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plugin_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\previous.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\print.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\projectsettings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\property.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Redo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\RedoDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\remove_user-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\repeat-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\res.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\resxedit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveas.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SaveButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\screenshot.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selectall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\signature.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\solexplr.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stacktrace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stop-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\threads.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TODO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\toggle.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trash.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Undo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UndoDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Unpinned.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\warning.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\youtube_copyrighted-26.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AL.CodeDomProvider\AL.CodeDomProvider.csproj">
+      <Project>{3c494b34-7281-48b7-afdd-4aa1c50cd554}</Project>
+      <Name>AL.CodeDomProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ALRefactoring\ALRefactoring.csproj">
+      <Project>{1de3a549-e566-439e-970d-055d3b4a1793}</Project>
+      <Name>ALRefactoring</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CompilersLibraryAPI\CompilersLibraryAPI.csproj">
+      <Project>{4fd0a62a-c4cd-462f-b851-f0c7937e64d8}</Project>
+      <Name>CompilersLibraryAPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Debugger\Debugger.AL\Debugger.AL.csproj">
+      <Project>{895cf972-0807-4872-856a-01561c0ce9e0}</Project>
+      <Name>Debugger.AL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Debugger\Debugger.Core\Debugger.Core.csproj">
+      <Project>{1d18d788-f7ee-4585-a23b-34dc8ec63cb8}</Project>
+      <Name>Debugger.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\devstd.host\devstd.host.csproj">
+      <Project>{82f9e760-fbac-4c74-a1f9-7df376bb3cdf}</Project>
+      <Name>devstd.host</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\devstd.lang\devstd.lang.csproj">
+      <Project>{88d080fd-d714-4779-bdca-feb30de8a5ba}</Project>
+      <Name>devstd.lang</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\devstd.utils\devstd.utils.csproj">
+      <Project>{3282a156-3d94-435d-bd5f-c10be45ed8cf}</Project>
+      <Name>devstd.utils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\dsfrmdesign\alfrmdesign.csproj">
+      <Project>{877224c3-f586-4754-83c0-f5f4e5e7d40a}</Project>
+      <Name>alfrmdesign</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\dsproj\alproj.csproj">
+      <Project>{ef29c1c0-fc83-483e-9e44-2807b034f54e}</Project>
+      <Name>alproj</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ICSharpCode.AvalonEdit\ICSharpCode.AvalonEdit.csproj">
+      <Project>{6c55b776-26d4-4db3-a6ab-87e783b2f3d1}</Project>
+      <Name>ICSharpCode.AvalonEdit</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ICSharpCode.CodeCompletion\ICSharpCode.CodeCompletion.csproj">
+      <Project>{82c28fbb-0408-466a-be20-bd4a3ce76a75}</Project>
+      <Name>ICSharpCode.CodeCompletion</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NREFACTORY\ICSharpCode.NRefactory.AL\ICSharpCode.NRefactory.AL.csproj">
+      <Project>{53dca265-3c3c-42f9-b647-f72ba678122b}</Project>
+      <Name>ICSharpCode.NRefactory.AL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NREFACTORY\ICSharpCode.NRefactory.Cecil\ICSharpCode.NRefactory.Cecil.csproj">
+      <Project>{2b8f4f83-c2b3-4e84-a27b-8dee1be0e006}</Project>
+      <Name>ICSharpCode.NRefactory.Cecil</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NREFACTORY\ICSharpCode.NRefactory.CSharp.Refactoring\ICSharpCode.NRefactory.AL.Refactoring.csproj">
+      <Project>{2a705fc6-1a9e-4941-9e47-254d79f2d9d5}</Project>
+      <Name>ICSharpCode.NRefactory.AL.Refactoring</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NREFACTORY\ICSharpCode.NRefactory\ICSharpCode.NRefactory.csproj">
+      <Project>{3b2a5653-ec97-4001-bb9b-d90f1af2c371}</Project>
+      <Name>ICSharpCode.NRefactory</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\library.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tick.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ALb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\alprojb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dsolb.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="devstdpro.ico" />
+    <None Include="Resources\devstd128.png" />
+    <None Include="Resources\devstd96.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,364 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AssemblyInfoCode" xml:space="preserve">
+    <value>include System.Reflection;
+include System.Runtime.CompilerServices;
+include System.Runtime.InteropServices;
+
+
+[assembly: AssemblyTitle("{$namespace.$}")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyConfiguration("")]
+[assembly: AssemblyCompany("Arsslensoft")]
+[assembly: AssemblyProduct("{$namespace.$}")]
+[assembly: AssemblyCopyright("Copyright © Arsslensoft 2014")]
+[assembly: AssemblyTrademark("")]
+[assembly: AssemblyCulture("")]
+[assembly: ComVisible(false)]
+[assembly: AssemblyVersion("1.0.0.0")]
+[assembly: AssemblyFileVersion("1.0.0.0")]</value>
+  </data>
+  <data name="ClassCode" xml:space="preserve">
+    <value>include System;
+
+program {$namespace.$}
+{
+ 
+ class {$class.$}
+  {
+
+
+  }
+
+
+}</value>
+  </data>
+  <data name="ControlCode" xml:space="preserve">
+    <value>include System;
+include System.Drawing;
+include System.Windows.Forms;
+
+program {$namespace.$}
+{
+public shared class {$class.$} : Control
+{
+public {$class.$}()
+{
+InitializeComponent();
+InitializeEvents();
+InitializeRessources();
+InitializeControlSafely();
+}
+}
+}</value>
+  </data>
+  <data name="DesignerCode" xml:space="preserve">
+    <value>program {$namespace.$}
+{
+shared class {$class.$}	
+{
+private System.ComponentModel.IContainer components = nothing;
+protected override sub Dispose(boolean disposing)	
+{
+if (disposing &amp;&amp; (components != nothing))		
+	{
+	components.Dispose();		
+	}
+mybase.Dispose(disposing);		
+}
+#region Windows Form Designer generated code		
+private sub InitializeComponent()	
+	{
+	self.components = new System.ComponentModel.Container();	
+		self.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;	
+		self.Text = "{$class.$}";	
+	}
+	#endregion
+	}
+}</value>
+  </data>
+  <data name="dsconfig" xml:space="preserve">
+    <value>&lt;!--  Generated by Arsslensoft Developer Studio 2015         --&gt;
+
+&lt;configuration&gt;
+      &lt;runtime&gt;
+      &lt;assemblyBinding&gt;
+            &lt;supportPortability PKT="7cec85d7bea7798e" enable="false"/&gt;
+            &lt;supportPortability PKT="31bf3856ad364e35" enable="false"/&gt;
+      &lt;/assemblyBinding&gt;
+      &lt;/runtime&gt;
+&lt;/configuration&gt;</value>
+  </data>
+  <data name="dsmanifest" xml:space="preserve">
+    <value>&lt;!--  Generated by Arsslensoft Developer Studio 2015         --&gt;
+
+&lt;?xml version="1.0" encoding="utf-8" standalone="yes"?&gt;
+&lt;assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0"&gt;
+  &lt;assemblyIdentity version="1.0.0.0" name="MyApplication.app"/&gt;
+  &lt;trustInfo xmlns="urn:schemas-microsoft-com:asm.v2"&gt;
+    &lt;security&gt;
+      &lt;requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3"&gt;
+          &lt;!-- UAC Manifest Options
+            If you want to change the Windows User Account Control level replace the 
+            requestedExecutionLevel node with one of the following.
+
+        &lt;requestedExecutionLevel  level="asInvoker" uiAccess="false" /&gt;
+        &lt;requestedExecutionLevel  level="requireAdministrator" uiAccess="false" /&gt;
+        &lt;requestedExecutionLevel  level="highestAvailable" uiAccess="false" /&gt;
+
+            Specifying requestedExecutionLevel node will disable file and registry virtualization.
+            If you want to utilize File and Registry Virtualization for backward 
+            compatibility then delete the requestedExecutionLevel node.
+           --&gt;
+
+          &lt;requestedExecutionLevel level="asInvoker"/&gt;
+
+      &lt;/requestedPrivileges&gt;
+    &lt;/security&gt;
+  &lt;/trustInfo&gt;
+&lt;/assembly&gt;</value>
+  </data>
+  <data name="EntryPointCode" xml:space="preserve">
+    <value>include System.Windows.Forms;
+include System;
+
+program {$namespace.$}
+{
+class ALEntry
+{
+static sub Main(string[] args)
+{
+Application.EnableVisualStyles();
+Application.SetCompatibleTextRenderingDefault(false);
+Application.Run(new MainForm());
+}
+}
+}</value>
+  </data>
+  <data name="EventCode" xml:space="preserve">
+    <value>include System.Windows.Forms;
+include System;
+include System.Drawing;
+
+program {$namespace.$}
+{
+shared class {$form.$}
+{
+
+public sub InitializeEvents()
+{
+// add components events here
+
+}
+
+public sub InitializeRessources()
+{
+// add components ressources here
+
+}
+
+public sub InitializeControlSafely()
+{
+// add controls here
+
+}
+
+}
+      
+}</value>
+  </data>
+  <data name="FormCode" xml:space="preserve">
+    <value>include System;
+include System.Windows.Forms;
+
+program {$namespace.$}
+{
+public shared class {$class.$} : Form
+{
+public {$class.$}()
+{
+InitializeComponent();
+InitializeEvents();
+InitializeRessources();
+InitializeControlSafely();
+}
+}
+}</value>
+  </data>
+  <data name="ProjectSetsXml" xml:space="preserve">
+    <value>&lt;sets&gt;
+
+&lt;output&gt;{$bin.$}&lt;/output&gt;
+&lt;target&gt;{$at.$}&lt;/target&gt;
+&lt;icon&gt;&lt;/icon&gt;
+&lt;info&gt;info.al&lt;/info&gt;
+&lt;symbols&gt;&lt;/symbols&gt;
+&lt;clscheck&gt;&lt;/clscheck&gt;
+&lt;doc&gt;&lt;/doc&gt;
+&lt;main&gt;&lt;/main&gt;
+&lt;platform&gt;x86&lt;/platform&gt;
+&lt;optimize&gt;true&lt;/optimize&gt;
+&lt;norwarn&gt;false&lt;/norwarn&gt;
+&lt;warnaserror&gt;false&lt;/warnaserror&gt;
+&lt;checked&gt;false&lt;/checked&gt;
+&lt;debug&gt;true&lt;/debug&gt;
+&lt;unsafe&gt;false&lt;/unsafe&gt;             
+&lt;sign&gt;False&lt;/sign&gt;
+&lt;delaysign&gt;False&lt;/delaysign&gt;
+&lt;highentropy&gt;False&lt;/highentropy&gt;
+
+&lt;utf8output&gt;False&lt;/utf8output&gt;
+
+&lt;warnlevel&gt;4&lt;/warnlevel&gt;
+
+&lt;keyfile&gt;&lt;/keyfile&gt;
+&lt;langversion&gt;4&lt;/langversion&gt;
+&lt;prefbuildlang&gt;en-US&lt;/prefbuildlang&gt;
+&lt;nowarn&gt;
+&lt;/nowarn&gt;
+&lt;warnlist&gt;
+&lt;/warnlist&gt;
+
+&lt;/sets&gt;</value>
+  </data>
+  <data name="UserControlCode" xml:space="preserve">
+    <value>include System;
+include System.Windows.Forms;
+
+program {$namespace.$}
+{
+public shared class {$class.$} : UserControl
+{
+public {$class.$}()
+{
+InitializeComponent();
+InitializeEvents();
+InitializeRessources();
+InitializeControlSafely();
+}
+}
+}</value>
+  </data>
+  <data name="BASEUDCODE" xml:space="preserve">
+    <value>&lt;breakpoints&gt;
+
+&lt;/breakpoints&gt;</value>
+  </data>
+</root>

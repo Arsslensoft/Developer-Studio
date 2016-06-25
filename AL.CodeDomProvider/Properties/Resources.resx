@@ -1,0 +1,409 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="ACRT" xml:space="preserve">
+    <value>include System;
+program ArsslenLang
+{
+  internal class ALCRT
+{
+public static sub Write(boolean value) 
+// warning possible mismatch
+         { 
+             Console.Write(value); 
+         } 
+         public static sub Write(char value) 
+         { 
+             Console.Write(value); 
+         } 
+         public static sub Write(char[] buffer) 
+         { 
+             Console.Write(buffer); 
+         } 
+         public static sub Write(decimal value) 
+         { 
+             Console.Write(value); 
+         } 
+         public static sub Write(real value) 
+// warning possible mismatch
+         { 
+             Console.Write(value); 
+         } 
+         public static sub Write(integer value) 
+// warning possible mismatch
+         { 
+             Console.Write(value); 
+         } 
+         public static sub Write(longint value) 
+// warning possible mismatch
+         { 
+             Console.Write(value); 
+         } 
+         public static sub Write(object value) 
+         { 
+             Console.Write(value); 
+         } 
+         public static sub Write(float value) 
+         { 
+             Console.Write(value); 
+         } 
+         public static sub Write(string value) 
+         { 
+             Console.Write(value); 
+         } 
+        
+         public static sub Write(uinteger value) 
+// warning possible mismatch
+         { 
+             Console.Write(value); 
+         } 
+       
+         public static sub Write(ulongint value) 
+// warning possible mismatch
+         { 
+             Console.Write(value); 
+         } 
+  
+         public static sub Write(string format, object arg0) 
+         { 
+             Console.Write(format, arg0); 
+         } 
+  
+         public static sub Write(string format, params object[] arg) 
+         { 
+             if (arg == nothing) 
+                 Console.Write(format); 
+             else 
+                 Console.Write(format, arg); 
+         } 
+  
+         public static sub Write(char[] buffer, integer index, integer count) 
+// warning possible mismatch// warning possible mismatch
+         { 
+             Console.Write(buffer, index, count); 
+         } 
+  
+         public static sub Write(string format, object arg0, object arg1) 
+         { 
+             Console.Write(format, arg0, arg1); 
+         } 
+  
+         public static sub Write(string format, object arg0, object arg1, object arg2) 
+         { 
+             Console.Write(format, arg0, arg1, arg2); 
+         } 
+  
+  
+         public static sub Writeln() 
+         { 
+             Console.WriteLine(); 
+         } 
+  
+         public static sub Writeln(boolean value) 
+// warning possible mismatch
+         { 
+             Console.WriteLine(value); 
+         } 
+  
+         public static sub Writeln(char value) 
+         { 
+             Console.WriteLine(value); 
+         } 
+  
+         public static sub Writeln(char[] buffer) 
+         { 
+             Console.WriteLine(buffer); 
+         } 
+  
+         public static sub Writeln(decimal value) 
+         { 
+             Console.WriteLine(value); 
+         } 
+  
+         public static sub Writeln(real value) 
+// warning possible mismatch
+         { 
+             Console.WriteLine(value); 
+         } 
+  
+         public static sub Writeln(integer value) 
+// warning possible mismatch
+         { 
+             Console.WriteLine(value); 
+         } 
+  
+         public static sub Writeln(longint value) 
+// warning possible mismatch
+         { 
+             Console.WriteLine(value); 
+         } 
+  
+         public static sub Writeln(object value) 
+         { 
+             Console.WriteLine(value); 
+         } 
+  
+         public static sub Writeln(float value) 
+         { 
+             Console.WriteLine(value); 
+         } 
+  
+         public static sub Writeln(string value) 
+         { 
+             Console.WriteLine(value); 
+         } 
+  
+       
+         public static sub Writeln(uinteger value) 
+// warning possible mismatch
+         { 
+             Console.WriteLine(value); 
+         } 
+  
+       
+         public static sub Writeln(ulongint value) 
+// warning possible mismatch
+         { 
+             Console.WriteLine(value); 
+         } 
+  
+         public static sub Writeln(string format, object arg0) 
+         { 
+             Console.WriteLine(format, arg0); 
+         } 
+  
+         public static sub Writeln(string format, params object[] arg) 
+         { 
+             if (arg == nothing) 
+                 Console.WriteLine(format); 
+             else 
+                 Console.WriteLine(format, arg); 
+         } 
+  
+         public static sub Writeln(char[] buffer, integer index, integer count) 
+// warning possible mismatch// warning possible mismatch
+         { 
+             Console.WriteLine(buffer, index, count); 
+         } 
+  
+         public static sub Writeln(string format, object arg0, object arg1) 
+         { 
+             Console.WriteLine(format, arg0, arg1); 
+         } 
+  
+         public static sub Writeln(string format, object arg0, object arg1, object arg2) 
+         { 
+             Console.WriteLine(format, arg0, arg1, arg2); 
+         } 
+         public static integer Read() 
+         { 
+             backwith Console.Read(); 
+         } 
+  
+         public static sub Readln(out string val) 
+         { 
+             val = Console.ReadLine(); 
+         } 
+         
+         public static sub Readln(out integer val)
+         { 
+             val =  integer.Parse(Console.ReadLine()); 
+// warning possible mismatch
+         } 
+         public static sub Readln(out byte val) 
+         { 
+             val = byte.Parse(Console.ReadLine()); 
+         } 
+         public static sub Readln(out char val) 
+         { 
+             val =  char.Parse(Console.ReadLine()); 
+         } 
+         public static sub Readln(out sbyte val) 
+         { 
+             val =  sbyte.Parse(Console.ReadLine()); 
+         } 
+         public static sub Readln(out boolean val) 
+         { 
+             val =  boolean.Parse(Console.ReadLine()); 
+// warning possible mismatch
+         } 
+         public static sub Readln(out shortint val) 
+         { 
+             val =  shortint.Parse(Console.ReadLine()); 
+// warning possible mismatch
+         } 
+         public static sub Readln(out longint val) 
+         { 
+             val =  longint.Parse(Console.ReadLine()); 
+// warning possible mismatch
+         } 
+         public static sub Readln(out ulongint val) 
+         { 
+             val =  ulongint.Parse(Console.ReadLine()); 
+// warning possible mismatch
+         } 
+         public static sub Readln(out uinteger val) 
+         { 
+             val =  uinteger.Parse(Console.ReadLine()); 
+// warning possible mismatch
+         } 
+         public static sub Readln(out real val) 
+         { 
+             val =  real.Parse(Console.ReadLine()); 
+// warning possible mismatch
+         } 
+         public static sub Readln(out decimal val) 
+         { 
+             val =  decimal.Parse(Console.ReadLine()); 
+         } 
+         public static sub Readln(out float val) 
+         { 
+             val =  float.Parse(Console.ReadLine()); 
+         } 
+         public static sub Beep(integer frequency, integer duration_ms) 
+// warning possible mismatch// warning possible mismatch
+         { 
+             Console.Beep(frequency, duration_ms); 
+         } 
+         public static string CRTWINDOWTEXT 
+         { 
+             get { backwith Console.Title; } 
+// warning possible mismatch// warning possible mismatch
+             put { Console.Title = value; } 
+// warning possible mismatch
+  
+         } 
+         public static ConsoleColor CRTWINDOWCOLOR 
+         { 
+             get { backwith Console.BackgroundColor; } 
+          put { Console.BackgroundColor = value; } 
+       } 
+         public static sub Clrscr() 
+         { 
+             Console.Clear(); 
+         } 
+         public static sub GotoXY(integer x,integer y) 
+// warning possible mismatch// warning possible mismatch
+         { 
+             Console.SetCursorPosition(x,y); 
+         } 
+    }
+}</value>
+  </data>
+</root>

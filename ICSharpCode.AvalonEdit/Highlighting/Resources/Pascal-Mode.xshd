@@ -1,0 +1,213 @@
+<?xml version="1.0"?>
+
+<SyntaxDefinition name = "Pascal" extensions = ".pas;.pascal;.pp">
+	<!--<Digits name = "Digits" bold = "false" italic = "false" color = "DarkBlue"/>-->
+  <Properties>
+    <Property name="LineComment" value="{"/>
+  </Properties>
+
+  <Digits name = "Digits"   bold = "false" italic = "false" color = "Black"/>
+
+  <RuleSets>
+    <RuleSet ignorecase = "true">
+
+      <Delimiters>~!@%^*()-+=|\#/{}[]:;'&lt;&gt;,.?</Delimiters>
+
+      <Span name = "STRING" bold = "false" italic = "false" color = "Black" stopateol = "true" escapecharacter='"'>
+        <Begin>"</Begin>
+        <End>"</End>
+      </Span>
+      <!--
+		    <Span name = "LINECOMMENT" rule = "DocumentSet" bold = "false" italic = "false" color = "Green" stopateol = "true">
+		        <Begin>'</Begin>
+		    </Span>
+		
+		    <Span name = "LINECOMMENT" rule = "DocumentSet" bold = "false" italic = "false" color = "Green" stopateol = "true">
+		        <Begin>REM</Begin>
+		    </Span>
+-->
+      <Span name = "PREPROCESSORDIRECTIVE" rule = "PreprocessorSet" bold = "false" italic = "false" color = "Maroon" stopateol = "true">
+        <Begin startofline="true">#</Begin>
+      </Span>
+
+      <Span name = "DATELITERAL" bold = "false" italic = "false" color = "Blue" stopateol = "true">
+        <Begin startofline="false">#</Begin>
+        <End>#</End>
+      </Span>
+
+      <Span name = "LINECOMMENT" bold = "false" italic = "false" color = "#008000" stopateol = "true">
+        <Begin>{</Begin>
+        <End>}</End>
+      </Span>
+      <Span name = "String" bold = "false" italic = "true" color = "#A31515" stopateol = "false" escapecharacter="\">
+        <Begin>'</Begin>
+        <End>'</End>
+      </Span>
+ 
+      <KeyWords name = "DataTypes" bold="false" italic="false" color="CornflowerBlue">
+        <Key word = "Boolean" />
+        <Key word = "Byte" />
+        <Key word = "Char" />
+        <Key word = "Date" />
+        <Key word = "Integer" />
+        <Key word = "Double" />
+        <Key word = "Real" />
+        <Key word = "Longint" />
+        <Key word = "Extended" />
+        <Key word = "Comp" />
+        <Key word = "Shortint" />
+        <Key word = "Word" />
+        <Key word = "String" />
+        <Key word = "Single" />
+        <Key word = "Vector" />
+        <Key word = "File" />
+        <Key word = "Text" />
+      </KeyWords>
+
+      <KeyWords name = "Operators" bold="false" italic="false" color="Purple">
+        <Key word = "And" />
+        <Key word = "Mod" />
+        <Key word = "Not" />
+        <Key word = "Or" />
+        <Key word = "Div" />
+        <Key word = "Xor" />
+        <Key word = "Nil" />
+
+        <Key word = "IN" />
+      </KeyWords>
+
+      <KeyWords name = "Constants" bold="false" italic="false" color="Blue">
+        <Key word = "False" />
+        <Key word = "True" />
+      </KeyWords>
+
+        <KeyWords name = "FunctionKeywords" bold="false" italic="false" color="LightSteelBlue">
+        <Key word = "Abs" />
+        <Key word = "Sqr" />
+        <Key word = "Sqrt" />
+        <Key word = "TRUNC" />
+        <Key word = "FRAC" />
+        <Key word = "ROUND" />
+        <Key word = "PRED" />
+        <Key word = "SUCC" />
+        
+          <Key word = "Ln" />
+        <Key word = "arctan" />
+        <Key word = "Exp" />
+        <Key word = "Cos" />
+        <Key word = "Sin" />
+        <Key word = "Ord" />
+        <Key word = "Chr" />
+        <Key word = "Odd" />
+        <Key word = "Eoln" />
+        <Key word = "Eof" />
+        <Key word = "Sum" />
+        <Key word = "GCD" />
+        <Key word = "Random" />
+      </KeyWords>
+
+
+      <KeyWords name = "AccessModifiers" bold="false" italic="false" color="Blue">
+        <Key word = "Private" />
+        <Key word = "Protected" />
+        <Key word = "Public" />
+      </KeyWords>
+
+      <KeyWords name = "OtherModifiers" bold="false" italic="false" color="SteelBlue">
+
+        <Key word = "ASM" />
+        <Key word = "Do" />
+        <Key word = "CASE" />
+        <Key word = "ARRAY" />
+        <Key word = "DOWNTO" />
+        <Key word = "To" />
+      </KeyWords>
+
+      <KeyWords name = "Statements" bold="false" italic="false" color="Blue">
+        <Key word = "REPEAT" />
+        <Key word = "RECORD" />
+        <Key word = "self" />
+        <Key word = "Set" />
+        <Key word = "GoTo" />
+        <Key word = "Continue" />
+        </KeyWords>
+
+      <KeyWords name = "GlobalConstructs" bold="false" italic="false" color="Blue">
+
+        <Key word = "Procedure" />
+
+        <Key word = "implementation" />
+        <Key word = "Inherited" />
+        <Key word = "Interface" />
+
+        <Key word = "Packed" />
+        <Key word = "Type" />
+        <Key word = "Program" />
+        <Key word = "Function" />
+        <Key word = "Const" />
+        <Key word = "Var" />
+        <Key word = "Uses" />
+        <Key word = "Begin" />
+        <Key word = "End" />
+        <Key word = "For" />
+        <Key word = "Case" />
+        <Key word = "Then" />
+        <Key word = "If" />
+        <Key word = "or_else" />
+        <Key word = "Else" />
+        <Key word = "and_then" />
+        <Key word = "While" />
+      </KeyWords>
+
+      <KeyWords name = "TypeLevelConstructs" bold="false" italic="false" color="#2B91AF">
+        <Key word = "Export" />
+        <Key word = "Import" />
+
+        <Key word = "CONSTRUCTOR" />
+        <Key word = "DESTRUCTOR" />
+      </KeyWords>
+
+      <KeyWords name = "Constructs" bold="false" italic="false" color="Blue">
+      
+        <Key word = "bindable" />
+   
+        <Key word = "only" />
+        <Key word = "pow" />
+        <Key word = "restricted" />
+        <Key word = "qualified" />    
+        <Key word = "otherwise" />
+        <Key word = "with" />
+  
+      </KeyWords>
+      <KeyWords name = "Punctuation" bold = "false" italic = "false" color = "Black">
+        <Key word = "," />
+        <Key word = "." />
+        <Key word = ";" />
+        <Key word = "+" />
+        <Key word = "=" />
+        <Key word = "*" />
+        <Key word = "/" />
+        <Key word = "-" />
+      </KeyWords>
+      <KeyWords name = "ContextKeywords" bold="false" italic="false" color="Blue">
+        <Key word = "Ansi" />
+        <Key word = "Auto" />
+        <Key word = "Unicode" />
+        <Key word = "Preserve" />
+        <Key word = "Until" />
+      </KeyWords>
+    </RuleSet>
+
+    <RuleSet name = "PreprocessorSet" ignorecase = "true">
+      <Delimiters>~!@%^*()-+=|\#/{}[]:;'&lt;&gt;,.?</Delimiters>
+
+      <KeyWords name = "PreProcessor" bold="true" italic="false" color="Maroon">
+        <Key word = "Const" />
+        <Key word = "If" />
+        <Key word = "Else" />
+       
+      </KeyWords>
+    </RuleSet>
+  </RuleSets>
+</SyntaxDefinition>
+

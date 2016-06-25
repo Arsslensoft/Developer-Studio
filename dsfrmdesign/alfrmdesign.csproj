@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{877224C3-F586-4754-83C0-F5F4E5E7D40A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>alfrmdesign</RootNamespace>
+    <AssemblyName>alfrmdesign</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\Bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevComponents.DotNetBar2, Version=11.8.0.0, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="Mono.Design, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Bin\Mono.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="NRefactory2">
+      <HintPath>..\Bin\NRefactory2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DesignerEvent.cs" />
+    <Compile Include="FormDesignerCalls.cs" />
+    <Compile Include="FormDesignerControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="FormDesignerControl.designer.cs">
+      <DependentUpon>FormDesignerControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="src\DesignTime\CodeProvider.cs" />
+    <Compile Include="src\DesignTime\CodeProviderDesignerLoader.cs" />
+    <Compile Include="src\DesignTime\CodeProviderEventBindingService.cs" />
+    <Compile Include="src\DesignTime\ToolboxFiller.cs" />
+    <Compile Include="src\DesignTime\TypeResolutionService.cs" />
+    <Compile Include="src\DesignTime\UndoRedoEngine.cs" />
+    <Compile Include="src\Project\Document.cs" />
+    <Compile Include="src\Project\References.cs" />
+    <Compile Include="src\Project\TemplateManager.cs" />
+    <Compile Include="src\Project\Workspace.cs" />
+    <Compile Include="src\UI\ErrorList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\ErrorList.Designer.cs">
+      <DependentUpon>ErrorList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\ErrorListTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\UI\PropertyGrid.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\PropertyGrid.Designer.cs">
+      <DependentUpon>PropertyGrid.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\ReferencesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="src\UI\ReferencesDialog.Designer.cs">
+      <DependentUpon>ReferencesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="src\UI\ToolBoxList\ToolBoxGroupHeader.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\ToolBoxList\ToolBoxGroupPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="src\UI\ToolBoxList\ToolBoxList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="src\UI\ToolBoxList\ToolBoxListItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FormDesignerControl.resx">
+      <DependentUpon>FormDesignerControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\ErrorList.resx">
+      <DependentUpon>ErrorList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\ErrorListTabPage.resx">
+      <DependentUpon>ErrorListTabPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="src\UI\ToolBoxList\ToolBoxListItem.resx">
+      <DependentUpon>ToolBoxListItem.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WizardWelcomeImage.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
