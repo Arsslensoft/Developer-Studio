@@ -1,4 +1,5 @@
-﻿using ICSharpCode.SharpZipLib.GZip;
+﻿using System.IO.Compression;
+
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -91,8 +92,9 @@ namespace CVP
        }
        void Compress(string file)
        {
-    
-          Stream s = new GZipOutputStream(File.Create(file + ".gz"));
+    using (FileStream outstream = new FileStream(file + ".gz", FileMode.Create))
+			{
+				Stream s = new GZipStream(outstream, CompressionMode.Compress, false);
 FileStream fs = File.OpenRead(file);
 int size;
 byte[] data = new byte[2048];
@@ -103,6 +105,7 @@ do
 } while (size > 0);
 s.Close();
 fs.Close();
+}
 File.Delete(file);
 File.Move(file + ".gz", file);
        }

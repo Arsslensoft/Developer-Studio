@@ -1,11 +1,5 @@
-﻿using ICSharpCode.SharpZipLib.Core;
-using ICSharpCode.SharpZipLib.GZip;
-using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.IO;
 using System.IO.Compression;
-using System.Linq;
-using System.Text;
 
 namespace CVP
 {
@@ -32,19 +26,32 @@ namespace CVP
             Opened = true;
   
         }
-        public Stream Decompress(Stream input)
+          public Stream Decompress(Stream input)
         {
-            MemoryStream m = new MemoryStream();
-            byte[] dataBuffer = new byte[4096];
-            using (GZipInputStream gzipStream = new GZipInputStream(input))
+MemoryStream memory = new MemoryStream();
+            byte[] buffer = new byte[4096];
+			using (GZipStream gzipStream = new GZipStream(input, CompressionMode.Decompress))
             {
 
-                // Change this to your needs
+			
 
-                StreamUtils.Copy(gzipStream, m, dataBuffer);
+                int count = 0;
+                do
+                {
+                    count = gzipStream.Read(buffer, 0, 4096);
+                    if (count > 0)
+                    {
+                        memory.Write(buffer, 0, count);
+                    }
+                }
+                while (count > 0);
+     
+         
+
+
 
             }
-            return m;
+            return memory;
         }
         CVPHeader ReadHeader()
         {
